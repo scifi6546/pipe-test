@@ -1,5 +1,5 @@
 import os
-pipe_name="pipe_name"
+pipe_name="/pipes/pipe"
 def child():
     pipeout=os.open(pipe_name,os.O_WRONLY)
     while(True):
@@ -14,5 +14,5 @@ def parent():
         pipein=open(pipe_name,'r')
         while True:
             test = pipein.read(1)
-            print(test,end='')
+            #print(test,end='')
 parent()
